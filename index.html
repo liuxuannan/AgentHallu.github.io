@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AgentHallu: Benchmarking Automated Hallucination Attribution of LLM-based Agents">
+  <meta name="keywords" content="Hallucination Attribution, LLM-based Agents, Automated Benchmarking">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgentHallu: Benchmarking Automated Hallucination Attribution of LLM-based Agents</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <style>
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 800px; /* Adjust the max height as needed */
+      object-fit: cover;
+    }
+    .your-carousel {
+      max-width: 920px; /* Adjust the width as needed */
+      margin: auto;
+    }
+  </style>
+
+  <style>
+    .carousel-video-item video {
+      width: 100%;
+      height: auto;
+      max-height: 500px; /* Adjust the max height as needed */
+      object-fit: cover;
+    }
+    .your-carousel-video {
+      max-width: 800px; /* Adjust the width as needed */
+      margin: auto;
+    }
+  </style>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AgentHallu: Benchmarking Automated Hallucination Attribution of LLM-based Agents</h1>
+<!--            <h1 class="is-size-3"> ACM MM 2024 </h1>-->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a>Xuannan Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a>Xiao Yang</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a>Zekun Li</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a> Peipei Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a> Ran He</a><sup>1</sup>,
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications&ensp;</span><br>
+              <span class="author-block"><sup>2</sup>Department of Computer Science & Technology, Tsinghua University&ensp;</span>
+              <span class="author-block"><sup>3</sup>University of California, Santa Barbara</span><br>
+              <span class="author-block"><sup>4</sup>MAIS & NLPR, Institute of Automation, Chinese Academy of Sciences</span>
+            </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.11842"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.11842"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/flageval-baai/Video-SafetyBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- data Link. -->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/BAAI/Video-SafetyBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Teaser-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/dataset_overview.png" alt="Teaser Image" height="100%">
+      <h2 class="subtitle has-text-centered">
+        Overview of safety risk taxonomy in Video-SafetyBench. The dataset includes 13 unsafe categories and 48 subcategories, with each video paired with both harmful (H) and benign (B) queries
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+          <p>
+          The increasing deployment of Large Vision-Language Models (LVLMs) raises safety concerns under potential malicious inputs. However, existing multimodal safety evaluations primarily focus on model vulnerabilities exposed by static image inputs, ignoring the temporal characteristics of video that may induce distinct safety risks.
+          </p>
+          <p>
+          To bridge this gap, we introduce Video-SafetyBench, the first comprehensive benchmark specifically designed to evaluate the safety of LVLMs when exposed to video attacks. It comprises 2,264 video-text pairs spanning 48 fine-grained safety categories, each pairing a synthesized video with either a harmful query, which contains explicit malice, or a benign query, which appears harmless but triggers harmful behavior when interpreted alongside the video.
+          </p>
+          <p>
+          To generate semantically accurate videos for safety evaluation, we design a controllable pipeline that decomposes video semantics into subject images and motion descriptions, which jointly guide the synthesis of query-relevant videos.
+          </p>
+          <p>
+          To effectively evaluate model responses in ambiguous or borderline cases, we propose RiskJudgeScore, a novel LLM-based metric that incorporates the confidence of judge models to quantify toxicity scores using token-level logit distributions.
+          </p>
+          <p>
+          Finally, our evaluation of 24 state-of-the-art video LVLMs reveals consistent vulnerabilities to video-induced attacks.
+          </p>
+          <p>
+          We believe Video-SafetyBench will catalyze future research into safety evaluation and defense strategies tailored to the video modality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<!--/ Abstract. -->
+
+
+
+<!-- DATASET SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison with Existing Benchmarks</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <img src="static/images/dataset_comparison.png" alt="algebraic reasoning" class="center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Experiments SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <img src="static/images/performance.png" alt="algebraic reasoning" class="center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Reference. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2025videosafetybench,
+  title={Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs},
+  author={Liu, Xuannan and Li, Zekun and He, Zheqi and Li, Peipei and Xia, Shuhan and Cui, Xing and Huang, Huaibo and Yang, Xi and He, Ran},
+  journal={arXiv preprint arXiv:2505.11842},
+  year={2025}
+}
+</code></pre>
+  </div>
+</section>
+<!--/ Reference. -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv/Video-SafetyBench">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/flageval-baai/Video-SafetyBench" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.your-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.your-carousel-video').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: true,
+      autoplay: false, // Turn off slick's autoplay, we will handle it manually
+    });
+
+    // Function to play the current video
+    function playCurrentVideo() {
+      var currentVideo = $('.your-carousel-video .slick-current').find('video').get(0);
+      if (currentVideo) {
+        currentVideo.play();
+        currentVideo.onended = function() {
+          $('.your-carousel-video').slick('slickNext');
+        };
+      }
+    }
+        // Play the first video explicitly
+    setTimeout(function() {
+      playCurrentVideo();
+    }, 500); // Slight delay to ensure everything is loaded
+    //
+    // // Initialize the first video
+    // // playCurrentVideo();
+    // // $('.your-carousel-video').on('init', function(event, slick){
+    // //   playCurrentVideo();
+    // // });
+    //
+    // // When the slide changes, play the new video
+    // $('.your-carousel-video').on('afterChange', function(event, slick, currentSlide){
+    //   playCurrentVideo();
+    //       // Trigger slick initialization
+    // $('.your-carousel-video').slick('setPosition');
+    // });
+    // When the carousel is initialized, play the first video
+    $('.your-carousel').on('init', function(event, slick){
+      playCurrentVideo();
+    });
+
+    // When the slide changes, play the new video
+    $('.your-carousel').on('afterChange', function(event, slick, currentSlide){
+      playCurrentVideo();
+    });
+
+    // Trigger slick initialization
+    $('.your-carousel').slick('setPosition');
+
+    // Play the first video explicitly
+    // playCurrentVideo();
+
+
+  });
+</script>
+
+</body>
+</html>

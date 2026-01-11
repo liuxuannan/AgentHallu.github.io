@@ -84,15 +84,15 @@
               <span class="author-block">
                 <a>Xuannan Liu</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a>Xiao Yang</a><sup>3</sup>,
+                <a>Xiao Yang</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a>Zekun Li</a><sup>2</sup>,</span>
+                <a>Zekun Li</a><sup>3</sup>,</span>
               <span class="author-block">
                 <a> Peipei Li</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a> Ran He</a><sup>1</sup>,
+                <a> Ran He</a><sup>4</sup>,
               </span>
             </div>
             <div class="is-size-5 publication-authors">
@@ -106,7 +106,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2505.11842"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -116,7 +116,7 @@
               </span>
 
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2505.11842"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -126,7 +126,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/flageval-baai/Video-SafetyBench"
+                <a href="https://github.com/liuxuannan/AgentHallu"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -138,7 +138,7 @@
               <!-- data Link. -->
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/BAAI/Video-SafetyBench"
+                <a href="https://github.com/liuxuannan/AgentHallu"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -162,7 +162,7 @@
     <div class="hero-body">
       <img src="./static/images/dataset_overview.png" alt="Teaser Image" height="100%">
       <h2 class="subtitle has-text-centered">
-        Overview of safety risk taxonomy in Video-SafetyBench. The dataset includes 13 unsafe categories and 48 subcategories, with each video paired with both harmful (H) and benign (B) queries
+        Illustration of hallucination attribution in LLM-based agents. <b>Left:</b> A misdefinition of regions X, Y, Z in Step 1 propagates to the tool call and leads to the incorrect final answer. <b>Right:</b> Beyond binary judgment, hallucination attribution aims to identify a hallucination-responsible step and a causal explanation.
       </h2>
     </div>
   </div>
@@ -178,23 +178,18 @@
         <div class="content has-text-justified">
 
           <p>
-          The increasing deployment of Large Vision-Language Models (LVLMs) raises safety concerns under potential malicious inputs. However, existing multimodal safety evaluations primarily focus on model vulnerabilities exposed by static image inputs, ignoring the temporal characteristics of video that may induce distinct safety risks.
-          </p>
+          As LLM-based agents operate over sequential multi-step reasoning, hallucinations arising at intermediate steps risk propagating along the trajectory, thus degrading overall reliability. Unlike hallucination detection in single-turn responses, diagnosing hallucinations in multi-step workflows requires identifying which step causes the initial divergence.          </p>
           <p>
-          To bridge this gap, we introduce Video-SafetyBench, the first comprehensive benchmark specifically designed to evaluate the safety of LVLMs when exposed to video attacks. It comprises 2,264 video-text pairs spanning 48 fine-grained safety categories, each pairing a synthesized video with either a harmful query, which contains explicit malice, or a benign query, which appears harmless but triggers harmful behavior when interpreted alongside the video.
-          </p>
+          To fill this gap, we propose a new research task, automated hallucination attribution of LLM-based agents, aiming to identify the step responsible for the hallucination and explain why.          </p>
           <p>
           To generate semantically accurate videos for safety evaluation, we design a controllable pipeline that decomposes video semantics into subject images and motion descriptions, which jointly guide the synthesis of query-relevant videos.
           </p>
           <p>
-          To effectively evaluate model responses in ambiguous or borderline cases, we propose RiskJudgeScore, a novel LLM-based metric that incorporates the confidence of judge models to quantify toxicity scores using token-level logit distributions.
-          </p>
+          To support this task, we introduce AgentHallu, a comprehensive benchmark with: (1) 693 high-quality trajectories spanning 7 agent frameworks and 5 domains, (2) a hallucination taxonomy organized into 5 categories (Planning, Retrieval, Reasoning, Human-Interaction, and Tool-Use) and 14 sub-categories, and (3) multi-level annotations curated by humans, covering binary labels, hallucination-responsible steps, and causal explanations.          </p>
           <p>
-          Finally, our evaluation of 24 state-of-the-art video LVLMs reveals consistent vulnerabilities to video-induced attacks.
-          </p>
+          We evaluate 13 leading models, and results show the task is challenging even for top-tier models (like GPT-5, Gemini-2.5-Pro). The best-performing model achieves only 41.1\% step localization accuracy, where tool-use hallucinations are the most challenging at just 11.6\%.          </p>
           <p>
-          We believe Video-SafetyBench will catalyze future research into safety evaluation and defense strategies tailored to the video modality.
-          </p>
+          We believe AgentHallu will catalyze future research into developing robust, transparent, and reliable agentic systems.          </p>
         </div>
       </div>
     </div>
@@ -244,7 +239,7 @@
 
 
 <!-- Reference. -->
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{liu2025videosafetybench,
@@ -255,7 +250,7 @@
 }
 </code></pre>
   </div>
-</section>
+</section> -->
 <!--/ Reference. -->
 
 <footer class="footer">

@@ -1,6 +1,6 @@
 # AgentHallu Home Page
 
-This is the repository that contains source code for the [AgentHallu website](https://liuxuannan.github.io/Video-SafetyBench.github.io/).
+This is the repository that contains source code for the [AgentHallu website](https://liuxuannan.github.io/AgentHallu.github.io/).
 
 <!-- If you find Video-SafetyBench useful for your work please cite:
 ```
